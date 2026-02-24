@@ -64,5 +64,8 @@ require("lazy").setup({
 
         -- 显示变量引用信息（lsp增强插件）
         { import = "plugins.lspsaga"},
+
+        -- 将代码发送到ipython实现jupyter功能
+        { import = "plugins.iron"}
     }
 })
