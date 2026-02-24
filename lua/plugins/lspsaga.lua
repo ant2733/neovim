@@ -1,6 +1,6 @@
 return {
 	"nvimdev/lspsaga.nvim",
-	cmd = "Lspsaga",
+    event = "LspAttach",
 	opts = {
 		finder = {
 			keys = {

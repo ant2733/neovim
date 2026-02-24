@@ -10,6 +10,7 @@ return {
         { "<leader>bo", ":BufferLineCloseOthers<CR>", silent = true },
         { "<leader>bp", ":BufferLinePick<CR>", silent = true },
         { "<leader>bc", ":BufferLinePickClose<CR>", silent = true },
+        {"<leader>wq", ":hide<CR>", silent = true},
 
         -- 数字键跳转
         { "<leader>1", function() require("bufferline").go_to_buffer(1) end, mode = "n", desc = "Go to buffer 1" },
@@ -36,10 +37,10 @@ return {
         { "<C-l>", "<C-w>l", mode = "n", desc = "Move to right window" },
 
         -- 调整窗口大小
-        { "<C-Up>", "<cmd>resize +2<CR>", mode = "n", desc = "Increase window height" },
-        { "<C-Down>", "<cmd>resize -2<CR>", mode = "n", desc = "Decrease window height" },
-        { "<C-Left>", "<cmd>vertical resize -2<CR>", mode = "n", desc = "Decrease window width" },
-        { "<C-Right>", "<cmd>vertical resize +2<CR>", mode = "n", desc = "Increase window width" },
+        { "<D-Up>", "<cmd>resize +2<CR>", mode = "n", desc = "Increase window height" },
+        { "<D-Down>", "<cmd>resize -2<CR>", mode = "n", desc = "Decrease window height" },
+        { "<D-Left>", "<cmd>vertical resize -2<CR>", mode = "n", desc = "Decrease window width" },
+        { "<D-Right>", "<cmd>vertical resize +2<CR>", mode = "n", desc = "Increase window width" },
                         
     },
     lazy = false,
