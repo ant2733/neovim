@@ -2,7 +2,9 @@ return {
 	"hkupty/iron.nvim",
 	config = function()
 		local iron = require("iron.core")
+
 		vim.env.PATH = "/opt/miniconda3/envs/origin/bin:" .. vim.env.PATH
+
 		iron.setup({
 			config = {
 				-- 1. 设置 REPL 窗口打开方式 (推荐垂直分屏，宽度120)

@@ -66,6 +66,7 @@ require("lazy").setup({
         { import = "plugins.lspsaga"},
 
         -- 将代码发送到ipython实现jupyter功能
-        { import = "plugins.iron"}
+        { import = "plugins.iron"},
+
     }
 })
