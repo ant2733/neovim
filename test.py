@@ -8,3 +8,4 @@ def func(x, y):
 
 
 print(func(1, 2))
+print(3)

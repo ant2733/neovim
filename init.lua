@@ -1,7 +1,7 @@
 require("core.basic")
 require("core.keymap")
 require("core.lazy")
-require("lsp.lsp")
+dofile(vim.fn.stdpath("config") .. "/custom/lsp.lua")
 
 if vim.g.neovide then
     -- 修改顶部栏的颜色
