@@ -1,7 +1,6 @@
 vim.lsp.enable "lua_ls"
 vim.lsp.enable "pylsp"
-vim.lsp.enable "html"
-vim.lsp.enable "jutls"
+vim.lsp.enable "jdtls"
 
 -- lsp的一些配置
 

@@ -42,7 +42,7 @@ return {
 		-- 快速打开特定目录
 		vim.keymap.set("n", "<leader>fc", function()
 			require("telescope").extensions.file_browser.file_browser({
-				path = "~/.config/nvim", -- Neovim配置目录
+				path = "C:/Users/m2073/AppData/Local/nvim", -- Neovim配置目录
 			})
 		end, { desc = "打开Neovim配置" })
 

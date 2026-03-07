@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 
 def func(x, y):
@@ -9,3 +10,4 @@ def func(x, y):
 
 print(func(1, 2))
 print(3)
+print(np.array([1, 2, 3]))
