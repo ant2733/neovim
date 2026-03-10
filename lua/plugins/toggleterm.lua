@@ -15,7 +15,7 @@ return {
     direction = 'vertical',
     
     -- 快捷键映射
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<C-\>]],
     
     -- 外观
     hide_numbers = true,
