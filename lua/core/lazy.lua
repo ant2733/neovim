@@ -56,6 +56,9 @@ require("lazy").setup({
         -- 显示图片
         { import = "plugins.snacks"},
 
+        -- Jupyter/Quarto notebook workflow
+        { import = "plugins.notebook"},
+
         -- 终端管理插件
         { import = "plugins.toggleterm"},
 
@@ -64,5 +67,11 @@ require("lazy").setup({
 
         -- 显示变量引用信息（lsp增强插件）
         { import = "plugins.lspsaga"},
-    }
+    },
+    -- image.nvim declares optional Lua rocks, but its Windows/Neovide
+    -- backend is intentionally disabled below. Prevent Lazy from repeatedly
+    -- bootstrapping a separate Lua toolchain that this setup never uses.
+    rocks = {
+        enabled = false,
+    },
 })

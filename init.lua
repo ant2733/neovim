@@ -3,6 +3,7 @@ require("core.keymap")
 require("core.lazy")
 dofile(vim.fn.stdpath("config") .. "/custom/lsp.lua")
 
+
 if vim.g.neovide then
     -- 修改顶部栏的颜色
     vim.g.neovide_title_background_color = string.format(

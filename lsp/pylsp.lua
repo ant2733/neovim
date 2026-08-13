@@ -1,6 +1,12 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- python-lsp-server can block for one second per synchronous lint task while
+-- creating progress tokens. Diagnostics still work without progress tokens.
+capabilities.window.workDoneProgress = false
+
 return {
   cmd = { 'pylsp' },
   filetypes = { 'python' },
+  capabilities = capabilities,
   root_markers = {
     'pyproject.toml',
     'setup.py',
