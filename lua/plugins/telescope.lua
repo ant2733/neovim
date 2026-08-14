@@ -12,6 +12,21 @@ return {
 	config = function()
 		local builtin = require("telescope.builtin")
 		local telescope = require("telescope")
+
+		-- 自动查找当前项目根目录
+		local function project_root()
+			local root = vim.fs.root(0, {
+				".git",
+				"pyproject.toml",
+				"requirements.txt",
+				"setup.py",
+				"package.json",
+				"CMakeLists.txt",
+			})
+
+			return root or vim.fn.getcwd()
+		end
+
 		-- 快捷键映射
 		vim.keymap.set("n", "<leader>ff", function()
 			builtin.find_files({ cwd = vim.fn.expand("E:/") })
@@ -38,6 +53,14 @@ return {
 				cwd = vim.loop.cwd(),
 			})
 		end, { desc = "项目文件浏览器" })
+
+		-- 当前项目查找文件
+		vim.keymap.set("n", "<leader>fp", function()
+			builtin.find_files({
+				cwd = project_root(),
+				hidden = true,
+			})
+		end, { desc = "项目内查找文件" })
 
 		-- 快速打开特定目录
 		vim.keymap.set("n", "<leader>fc", function()

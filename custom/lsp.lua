@@ -38,6 +38,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- basic keymaps
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer = event.buf, desc = 'LSP: Goto Definition'})
         vim.keymap.set('n', 'gD', vim.lsp.buf.definition, {buffer = event.buf, desc = 'LSP: Goto Declaration'})
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+        vim.keymap.set("n","gI","<cmd>Telescope lsp_implementations<CR>",{ desc = "Go to implementations" })
     end
 })
 
