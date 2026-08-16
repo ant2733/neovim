@@ -25,5 +25,5 @@ vim.opt.clipboard = "unnamedplus"       -- 默认使用系统剪切板
 vim.opt.nrformats = "bin,hex,alpha"
 
 vim.opt.wrap = false             -- 关闭自动换行
-vim.opt.sidescroll = 0      -- 每次横向滚动 0 列（平滑）或设置为具体数字
+vim.opt.sidescroll = 5      -- 每次横向滚动 0 列（平滑）或设置为具体数字
 vim.opt.sidescrolloff = 5   -- 光标距离屏幕边缘 5 列时开始滚动，保持上下文
