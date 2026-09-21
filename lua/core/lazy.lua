@@ -68,5 +68,8 @@ require("lazy").setup({
         -- 将代码发送到ipython实现jupyter功能
         { import = "plugins.iron"},
 
+        -- 渲染markdown文件
+        {import = "plugins.render-markdown"}
+
     }
 })

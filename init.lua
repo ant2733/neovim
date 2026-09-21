@@ -7,7 +7,6 @@ dofile(vim.fn.stdpath("config") .. "/custom/lsp.lua")
 -- 指定python路径
 vim.g.python3_host_prog = "/opt/miniconda3/envs/origin/bin/python3"
 
-
 if vim.g.neovide then
     -- 修改顶部栏的颜色
     vim.g.neovide_title_background_color = string.format(
@@ -16,9 +15,10 @@ if vim.g.neovide then
     )
 
     vim.g.neovide_title_text_color = "pink"
+    vim.g.neovide_opacity = 0.85
 
     -- 设置字号大小
-    vim.o.guifont = "Monaco:h20"    
+    -- vim.o.guifont = "Monaco:h20"    
      -- 动态调整字号（快捷键）
     vim.keymap.set("n", "<C-=>", function()
       vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.1
