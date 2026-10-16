@@ -29,3 +29,16 @@ if vim.g.neovide then
     end, { desc = "Decrease font size" }) 
 end
 
+-- 设置make的内容
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp" },
+  callback = function()
+    -- %  = 当前文件的完整路径
+    -- %< = 当前文件去掉扩展名(用来当输出文件名)
+    vim.opt_local.makeprg =
+      "clang++ -std=c++20 -Wall -Wextra -g -fno-color-diagnostics % -o %<"
+    -- 让 Vim 读懂 clang/gcc 的 "文件:行:列: 消息" 格式
+    vim.opt_local.errorformat =
+      "%f:%l:%c: %trror: %m,%f:%l:%c: %tarning: %m,%f:%l:%c: %m"
+  end,
+})
