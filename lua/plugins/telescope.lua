@@ -207,6 +207,7 @@ return {
 				path = project_root,
 				cwd = project_root,
 				hidden = true,
+                depth = false,
 			})
 		end, { desc = "项目文件浏览器" })
 
